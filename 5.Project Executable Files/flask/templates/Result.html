@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+        .result-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .result-container h1 {
+            color: #333;
+        }
+        .result-container p {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .prediction-kidney {
+            color: #ff0000; /* Red color for kidney disease */
+        }
+        .prediction-not-kidney {
+            color: #00cc00; /* Green color for not kidney disease */
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Prediction Result:</h1>
+        <p class="{{'prediction-kidney' if prediction == 0 else 'prediction-not-kidney'}}">
+            {{'Kidney Disease' if prediction == 0 else 'Not Kidney Disease'}}
+        </p>
+    </div>
+</body>
+</html>
